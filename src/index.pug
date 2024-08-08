@@ -1,0 +1,29 @@
+//- ---
+//- dynamicPermalink: false
+//- permalink: 'xx.html'
+//- ---
+
+extends /_layout-default
+
+prepend config-block
+  //- - site.page_name = ''
+  //- - site.description = ''
+  //- - site.keywords = ''
+  //- - site.url = ''
+  //- - site.ogp_type = 'article'
+
+//- append stylesheet-block
+//-   link(rel="stylesheet", href="/assets/styles/page.css")
+
+//- append javascript-block
+//-   script(src="/assets/scripts/page.js")
+
+block content-block
+  include /_header
+
+  main.l-main
+    //- ul
+    //-   - for (var i = 0; i < 5; i++)
+    //-     li item#{i + 1}
+
+  include /_footer

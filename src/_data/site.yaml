@@ -1,0 +1,32 @@
+# site title
+name: nano-starter
+
+# meta description
+description: web page description.
+
+# meta keywords
+# keywords: [keywords,keywords,keywords]
+
+# og:url・canonical
+# url: http://example.com/
+
+# Facebook・Twitter ogp image
+# ogp_image_url: http://example.com/ogp.jpg
+
+# Facebook app id
+# facebook_app_id: 99999999999
+
+# Twitter cards Account
+# twitter_card_owner: '@TwitterJP'
+
+# favicon
+favicon_url: /assets/images/favicon.ico
+
+# webclipicon_url
+# webclipicon_url: http://example.com/webclipicon.png
+
+# apple-mobile-web-app-status-bar-style - default / black / black-translucent
+# ios_status_bar: default
+
+# version
+version: ?ver=1.0.0

@@ -1,0 +1,61 @@
+{
+  "name": "static-kit",
+  "description": "front-end development environment.",
+  "version": "1.0.9",
+  "private": true,
+  "scripts": {
+    "dev:template": "eleventy --serve",
+    "dev:assets": "webpack --mode development --watch",
+    "dev": "npm run dev:template & npm run dev:assets",
+    "build:template": "npx @11ty/eleventy",
+    "build:assets": "webpack --mode production",
+    "build": "npm run build:template & npm run build:assets"
+  },
+  "dependencies": {
+    "a11y-dialog": "^8.0.1",
+    "body-scroll-lock": "3.1.5",
+    "motion": "^10.16.2",
+    "swiper": "8.4.7"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-server-browsersync": "^1.0.2",
+    "@squoosh/lib": "^0.5.3",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "autoprefixer": "^10.4.15",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.6.0",
+    "cssnano": "^6.0.1",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "image-minimizer-webpack-plugin": "^3.2.3",
+    "import-glob-loader": "^1.1.0",
+    "js-yaml": "^4.1.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "postcss": "^8.4.27",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-loader": "^7.0.0",
+    "postcss-sort-media-queries": "^5.2.0",
+    "prettier": "^3.0.2",
+    "sass": "^1.65.1",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-remove-empty-scripts": "^1.0.3"
+  },
+  "browserslist": [
+    "last 2 Edge version",
+    "last 2 Chrome version",
+    "last 2 Firefox version",
+    "last 2 Safari version",
+    "last 2 iOS version",
+    "last 2 ChromeAndroid version",
+    "> 3% in JP"
+  ]
+}

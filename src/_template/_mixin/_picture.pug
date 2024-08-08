@@ -1,0 +1,67 @@
+//- breakpoints
+- var sm   = "576"
+- var md   = "768"
+- var lg   = "992"
+- var xl  = "1200"
+- var xxl = "1400"
+
+//- PC・SP画像を分ける時
+mixin picture-media(options)
+  - options = options || {};
+  picture
+    source(
+      type="image/webp"
+      media=`(max-width:${options.media - 1}px)`
+      srcset=`${options.path}${options.name}_sp.${options.type}.webp`
+      width=`${options.widthSP}`
+      height=`${options.heightSP}`
+    )
+    source(
+      type="image/webp"
+      media=`(min-width:${options.media}px)`
+      srcset=`${options.path}${options.name}_pc.${options.type}.webp`
+      width=`${options.widthPC}`
+      height=`${options.heightPC}`
+    )
+    if(options.lazy)
+      img(src=`${options.path}${options.name}_sp.${options.type}` alt=(options.alt || '') loading="lazy" decoding="async" width=`${options.widthSP}` height=`${options.heightSP}`)
+    else
+      img(src=`${options.path}${options.name}_sp.${options.type}` alt=(options.alt || '') width=`${options.widthSP}` height=`${options.heightSP}`)
+//- +picture-media({
+//-   media: md,
+//-   path: '/assets/images/',
+//-   name: 'filename',
+//-   type: 'jpg',
+//-   alt: '',
+//-   widthSP: 100,
+//-   heightSP: 100,
+//-   widthPC: 100,
+//-   heightPC: 100,
+//-   lazy: true
+//- })
+
+
+//- PC・SP画像を分けない時
+mixin picture(options)
+  - options = options || {};
+  picture
+    source(
+      type="image/webp"
+      srcset=`${options.path}${options.name}.${options.type}.webp`
+      width=`${options.width}`
+      height=`${options.height}`
+    )
+    if(options.lazy)
+      img(src=`${options.path}${options.name}.${options.type}` alt=(options.alt || '') loading="lazy" decoding="async" width=`${options.width}` height=`${options.height}`)
+    else
+      img(src=`${options.path}${options.name}.${options.type}` alt=(options.alt || '') width=`${options.width}` height=`${options.height}`)
+
+//- +picture({
+//-   path: '/assets/images/',
+//-   name: 'filename',
+//-   type: 'png',
+//-   alt: '',
+//-   width: 100,
+//-   height: 100,
+//-   lazy: true
+//- })

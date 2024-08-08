@@ -1,0 +1,7 @@
+@use '../../global' as *;
+@use 'sass:math';
+
+.c-button {
+  @include mq-up(md) {
+  }
+}

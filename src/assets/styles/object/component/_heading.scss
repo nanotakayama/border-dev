@@ -1,0 +1,7 @@
+@use '../../global' as *;
+@use 'sass:math';
+
+.c-heading {
+  @include mq-up(md) {
+  }
+}
